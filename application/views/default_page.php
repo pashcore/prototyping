@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</p>
 	<p>
 		<strong>3. Мне нужна javascript библиотека или CSS-файл?</strong><br>
-		Можно добавить, но проежде нужно проверить в директориях js и css, возможно они уже есть.
+		Можно добавить, но прежде нужно проверить в директориях js и css, возможно они уже есть.
 	</p>
 </div>
 </body>
