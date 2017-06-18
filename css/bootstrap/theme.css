@@ -1,0 +1,37 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.push-reset {
+  clear: both;
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+}
+
+.st-updatepass {
+  background-color: #faebcc;
+}
+
+.st-updatepass td {
+  background-color: #faebcc;
+}
+
+.task-delegated td {
+  background-color: #E5E5FC;
+}

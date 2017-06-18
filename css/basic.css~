@@ -1,0 +1,215 @@
+html {
+	overflow: auto;
+}
+
+html, body {
+	background: #FEFEFE;
+	color: #111;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family:tahoma,verdana,geneva,lucida,'lucida grande',arial,helvetica,sans-serif;
+    font-size:13px;
+}
+
+TABLE.markup {
+	padding: 0px !important;
+	margin: 0 !important;
+	border-collapse:collapse;
+}
+
+TABLE.markup TD,TR {
+	padding: 0px !important;
+	border: 0px;
+	margin: 0 !important;
+	vertical-align: top;
+}
+
+TABLE.layout TD {
+	border: 1px solid black;
+	padding: 2px;
+}
+
+TABLE.mainmenu {
+	background-color: #CCE;
+	vertical-align: middle;
+}
+TABLE.mainmenu TD {
+	border: 1px solid #AAC;
+	background-color: #BBD;
+	padding: 0px;
+}
+TABLE.mainmenu TD.separator {
+	background-color: #CCE;
+	border: 0px;
+	width: 100%;
+}
+TABLE.mainmenu TD:hover {
+	background-color: #DDF;
+}
+
+TABLE.list {
+	border: 4px solid #BBCCFF;
+	border-spacing: 0px;
+	background-color: #FAFAFA;
+	cursor: default;
+}
+
+TABLE.list TH {
+	background-color: #AAC;
+	color: #FFF;
+	text-align: center;
+	height: 20px;
+	font-weight: bold;
+	vertical-align: middle !important;
+}
+
+TABLE.list TD {
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #777;
+	padding: 0px 5px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+TABLE.list TR:hover {
+	background-color: #DDF;
+}
+
+TABLE.list TD.lightlabel {
+	background-color: #EEF;
+	width: 200px;
+	text-align: right;
+	padding: 0px 5px !important;
+	font-weight: bold;
+}
+
+
+.noeffects TR:hover {
+	background-color: inherit !important;
+	cursor: inherit !important;
+}
+
+a.menuhref {
+	padding: 0px 30px;
+	text-decoration:none
+}
+.hidden {
+	display:none;
+}
+
+a {color: #111;}
+a.abonentHref:link {text-decoration:none}
+a.abonentHref:visited {text-decoration:none}
+a.abonentHref:active {text-decoration:none}
+a.abonentHref:hover {text-decoration:none}
+a img {border: none; }
+
+.isButton {
+	background-color: #AAC;
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	height: 20px;
+	font-weight: bold;
+	border: 0px;
+	vertical-align: middle !important;
+	padding: 2px;
+}
+
+.isButton:hover {
+	background-color: #ACF;
+}
+
+
+.buttonUnfold {
+	background-image: url('/img/8/arrow_up.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 20px;
+}
+
+.buttonFold {
+	background-image: url('/img/8/arrow_down.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 20px;
+}
+
+.tHead {
+	background-color: #AAC;
+	color: #FFF;
+	text-align: center;
+	height: 20px;
+	font-weight: bold;
+	vertical-align: middle !important;
+}
+
+
+.unfolded {
+	border: 2px solid #AAC;
+}
+
+/*.selectable_list:hover {
+	background-image: url('/img/8/arrow_right.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;
+}*/
+.selectable_list {cursor: pointer;}
+.listSelected {background-color: #AEC;}
+/* .listSelected:hover TD {background-color: #ACC !important;} */
+	
+.lightfont {
+	color: #999;
+	font-size: 10px;
+}
+
+
+TABLE.genblock {
+/* 	border: 0px; */
+	border-spacing: 0px;
+	cursor: default;
+	border: 1px solid black;
+	border-radius: 10px 10px 0px 0px;
+}
+
+
+
+TABLE.genblock TH {
+ 	border-radius: 10px 10px 0px 0px; 
+	background-color: #88AACC;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	border-bottom: 1px solid #579;
+	color: white;
+}
+
+TABLE.foldable TH:hover {
+	background-color: #AABBDD;
+}
+
+
+TABLE.genblock TD {
+	
+}
+
+TABLE.foldable TH.folded {
+	background-image: url('/img/8/arrow_right.png') !important;
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;
+	padding-right: 15px;
+}
+
+TABLE.foldable TH {
+	background-image: url('/img/8/arrow_down.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;
+	padding-right: 15px;
+}
+
+
+

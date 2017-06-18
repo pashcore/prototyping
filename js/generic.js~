@@ -1,0 +1,69 @@
+$.fn.foldable_table=function() {
+	$(this).find('TR TH').each(function() {
+		if ($(this).hasClass('folded')) {
+			var cwidth=$(this).width();
+			$(this).parent().parent().find('TR TD').hide();
+			$(this).width(cwidth);
+		}
+		$(this).bind('click',function() {foldable_unfold(this)});
+	});
+}
+
+function foldable_unfold(rel_obj) {
+	var cwidth=$(rel_obj).width();
+	$(rel_obj).parent().parent().find('TR TD').toggle();	
+	$(rel_obj).toggleClass('folded');
+	$(rel_obj).width(cwidth);
+}
+
+$.fn.selectable_table=function() {
+	$(this).find('TR TD').css('cursor','pointer');
+	$(this).find('TR TD').bind('click',function() {hilit(this)});
+}
+
+function hilit(rel_obj) {
+	if ($(rel_obj).hasClass("listSelected")) {
+		$(rel_obj).removeClass("listSelected");
+	} else {
+		$(rel_obj).parent().parent().find('TR TD').removeClass("listSelected");
+		$(rel_obj).addClass("listSelected");
+	}
+}
+
+
+function showhide(layer_ref) {
+	if ($("#"+layer_ref).is(":hidden")) {
+		$("#"+layer_ref).slideDown('fast');
+		return true;
+	} else {
+		$("#"+layer_ref).slideUp('fast');
+		return false;
+	}
+}
+
+function show_layer(layer_ref) {
+	if (document.getElementById) {
+		hza = document.getElementById(layer_ref);
+			hza.style.display = 'block';
+	}
+}
+
+function hide_layer(layer_ref) {
+	if (document.getElementById &&!document.all) {
+		hza = document.getElementById(layer_ref);
+		hza.style.display = 'none';
+	}
+}
+
+function foldunfold(button_rel, object_rel) {
+	var nnn=showhide(object_rel);
+	if (nnn==true) {
+		$(button_rel).addClass("buttonUnfold");
+		$(button_rel).removeClass("buttonFold");
+	} else {
+		$(button_rel).addClass("buttonFold");
+		$(button_rel).removeClass("buttonUnfold");
+	}
+}
+
+	 
