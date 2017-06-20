@@ -10,30 +10,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Заглавная страница</title>
-<link rel="icon" href="images/favicon.png">
+<link rel="icon" href="http://prototyping.local/images/favicon.png">
 <!-- базовые стили -->
-<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+<link href="http://prototyping.local/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="http://prototyping.local/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
 <!-- это кастомизация темы, изменения и докруты классов -- сюда -->
-<link href="css/bootstrap/theme.css" rel="stylesheet">
- <link href="css/bootstrap/bootstrap-select.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
+<link href="http://prototyping.local/css/bootstrap/theme.css" rel="stylesheet">
+ <link href="http://prototyping.local/css/bootstrap/bootstrap-select.css" rel="stylesheet">
+<script src="http://prototyping.local/js/jquery.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+<script src="http://prototyping.local/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="js/bootstrap/html5shiv.min.js"></script>
 <script src="js/bootstrap/respond.min.js"></script>
 <![endif]-->
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/bootstrap/bootstrap-select.js"></script>
+<script src="http://prototyping.local/js/bootstrap/bootstrap.min.js"></script>
+<script src="http://prototyping.local/js/bootstrap/bootstrap-select.js"></script>
 </head>
 <body role="document">
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-collapse collapse">
-			<div class="pull-left" style="margin-top: 5px;"><img src="images/favicon.png" style="height: 25px; margin-left: 3px;"><br>ЭДС</div>
+			<div class="pull-left" style="margin-top: 5px;"><img src="http://prototyping.local/images/favicon.png" style="height: 25px; margin-left: 3px;"><br>ЭДС</div>
 				<ul class="nav navbar-nav navbar-left">
 					<li><a href="#">Задачи</a></li>
 					<li><a href="#">Корреспонденция</a></li>
