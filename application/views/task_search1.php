@@ -32,7 +32,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="js/bootstrap/bootstrap-select.js"></script>
 <script src="js/moment-with-locales.js"></script>
 <script src="js/bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function () {
+		$('#datetimepicker2').datetimepicker({
+	    	locale: 'ru',
+	    	viewMode: 'years',
+	    	format: 'DD/MM/YYYY'
+		});
+	});
+	var data;
+	 $(document).ready(function(){
+	  $("#button_1").click(function(e){
+	      e.preventDefault();
+	        $.ajax({	 
+	        	url: 'index.php/api/data/load/search:testresult',
+	        	dataType: 'json',
+	  			success: function(answ){
+	  				$('#ttest0').empty();
+	  				$('#ttest1').empty();
+	  				$('#ttest2').empty();
+	  				$('#ttest3').empty();
 
+	  				$.each(answ, function (index, value) {
+	  				  $('#ttest0').append(value.id + '<br>');
+					  $('#ttest1').append(value.name + '<br>');
+					  $('#ttest2').append(value.size + '<br>');
+					  $('#ttest3').append(value.age + '<br>');
+					});
+	           	}
+
+	       });
+	  });
+	});
+
+
+	 </script>
+	    
 </head>
 <body role="document">
 <!-- Fixed navbar -->
@@ -57,17 +92,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <div class="container theme-showcase" role="main">
 	<h2>Поиск</h2>
-
+	<form class="form-horizontal">
 	<div class="form-group">
-	    <label for="inputTxt1" class="col-sm-2 control-label">Текст задачи</label>
-	    <div class="col-sm-10">
+	    <label for="inputTxt1" class="col-xs-4 control-label">Текст задачи</label>
+	    <div class="col-xs-8">
 	      <input type="text" class="form-control" id="inputTxt1" placeholder="Текст задачи">
 	    </div>
 	</div>
 
 	<div class="form-group">
-	  <label class="col-sm-4 control-label">Специальность исполнителя</label>
-	  <div class="col-sm-3">
+	  <label class="col-xs-4 control-label">Специальность исполнителя</label>
+	  <div class="col-xs-3">
 	  <select class="form-control">
 		  <option>1</option>
 		  <option>2</option>
@@ -76,24 +111,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  <option>5</option>
 		</select>
 		</div>
+	   <label for="inputTxt2" class="col-xs-2 control-label">Исполнитель</label>
+	   <div class="col-xs-3">
+	     <input type="text" class="form-control" id="inputTxt2" placeholder="Исполнитель">
+	   </div>
 	</div>
 	<div class="form-group">
-	    <label for="inputTxt2" class="col-sm-2 control-label">Исполнитель</label>
-	    <div class="col-sm-3">
-	      <input type="text" class="form-control" id="inputTxt2" placeholder="Исполнитель">
-	    </div>
-	</div>
-	<div class="form-group">
-	    <label for="inputTxt3" class="col-sm-2 control-label">Проверяющий</label>
-	    <div class="col-sm-3">
+	    <label for="inputTxt3" class="col-xs-4 control-label">Проверяющий</label>
+	    <div class="col-xs-3">
 	      <input type="text" class="form-control" id="inputTxt3" placeholder="Проверяющий">
 	    </div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Дата</label>
+		<label class="col-xs-2 control-label">Дата</label>
 	    
-	        <div class='col-sm-5'>
-	            <div class="form-group">
+	        <div class='col-xs-3'>
+	            <div>
 	                <div class='input-group date' id='datetimepicker2'>
 	                    <input type='text' class="form-control" />
 	                    <span class="input-group-addon">
@@ -102,57 +133,67 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                </div>
 	            </div>
 	        </div>
-	        <script type="text/javascript">
-	            $(function () {
-	                $('#datetimepicker2').datetimepicker({
-	                    locale: 'ru',
-	                    format: 'DD/MM/YYYY'
 
-	                });
-	            });
-	        </script>
-	    
 	</div>
+
 	<div class="form-group">
-	    <label for="inputTxt4" class="col-sm-3 control-label">Номенклатурная группа</label>
-	    <div class="col-sm-9">
+	    <label for="inputTxt4" class="col-xs-4 control-label">Номенклатурная группа</label>
+	    <div class="col-xs-8">
 	      <input type="text" class="form-control" id="inputTxt4" placeholder="Номенклатурная группа">
 	    </div>
 	</div>
 
 	<div class="form-group">
-	    <label class="col-sm-2 control-label">Статус задачи</label>
-	    <div class="col-sm-2">
+	    <label class="col-xs-3  control-label">Статус задачи</label>
+	    <div class="col-xs-2">
 	      <label>
 		    <input type="checkbox" value="Черновик">
 		    Черновик
 		  </label>
 	    </div>
-	    <div class="col-sm-2">
+	    <div class="col-xs-2">
 	      <label>
 		    <input type="checkbox" value="В работе">
 		    В работе
 		  </label>
 	    </div>
-	    <div class="col-sm-3">
+	    <div class="col-xs-3">
 	      <label>
 		    <input type="checkbox" value="Приостановлена">
 		    Приостановлена
 		  </label>
 	    </div>
-	    <div class="col-sm-2">
+	    <div class="col-xs-2">
 	      <label>
 		    <input type="checkbox" value="Закрыта">
 		    Закрыта
 		  </label>
 	    </div>
 	  </div> 
-
-	<button type="button" class="btn btn-primary">Поиск</button>
-
+	</form>
+	
+	<div class="col-xs-3 col-xs-offset-9">
+		<button type="button" id="button_1" class="btn btn-primary">Поиск</button>
+	</div>
+	
 	<div class="table-responsive">
 	  <table class="table">
-	    ...
+	    <thead>
+	    	<tr>
+	    		<th>id</th>
+	    		<th>Age</th>
+	    		<th>Name</th>
+	    		<th>Size</th>
+	    	</tr>
+	    </thead>
+	    <tbody>
+	    	<tr>
+	    		<th><div id="ttest0"  ></th>
+	    		<td><div id="ttest1"  ></td>
+	    		<td><div id="ttest2"  ></td>
+	    		<td><div id="ttest3"  ></div></td>
+	    	</tr>
+	    </tbody>
 	  </table>
 	</div>
 </div>

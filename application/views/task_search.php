@@ -59,8 +59,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h2>Поиск</h2>
 
 	<div class="form-group">
-	    <label for="inputTxt1" class="col-sm-2 control-label">Текст задачи</label>
-	    <div class="col-sm-10">
+	    <label for="inputTxt1" class="col-sm-3 control-label">Текст задачи</label>
+	    <div class="col-sm-9">
 	      <input type="text" class="form-control" id="inputTxt1" placeholder="Текст задачи">
 	    </div>
 	</div>
@@ -78,29 +78,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	<div class="form-group">
-	    <label for="inputTxt2" class="col-sm-2 control-label">Исполнитель</label>
-	    <div class="col-sm-10">
+	    <label for="inputTxt2" class="col-sm-3 control-label">Исполнитель</label>
+	    <div class="col-sm-9">
 	      <input type="text" class="form-control" id="inputTxt2" placeholder="Исполнитель">
 	    </div>
 	</div>
 	<div class="form-group">
-	    <label for="inputTxt3" class="col-sm-2 control-label">Проверяющий</label>
-	    <div class="col-sm-10">
+	    <label for="inputTxt3" class="col-sm-3 control-label">Проверяющий</label>
+	    <div class="col-sm-9">
 	      <input type="text" class="form-control" id="inputTxt3" placeholder="Проверяющий">
 	    </div>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-2 control-label">Дата</label>
+		<label class="col-sm-3 control-label">Дата</label>
 	    
-	        <div class='col-sm-10'>
-	            <div class="form-group">
+	        <div class='col-sm-9'>
+	            
 	                <div class='input-group date' id='datetimepicker2'>
 	                    <input type='text' class="form-control" />
 	                    <span class="input-group-addon">
 	                        <span class="glyphicon glyphicon-calendar"></span>
 	                    </span>
 	                </div>
-	            </div>
+	            
 	        </div>
 	        <script type="text/javascript">
 	            $(function () {
