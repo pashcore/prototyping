@@ -40,24 +40,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    	format: 'DD/MM/YYYY'
 		});
 	});
-	var data;
+	
 	 $(document).ready(function(){
 	  $("#button_1").click(function(e){
+	  	var str_table = '';
 	      e.preventDefault();
 	        $.ajax({	 
 	        	url: 'index.php/api/data/load/search:testresult',
 	        	dataType: 'json',
 	  			success: function(answ){
 	  				$('#ttest0').empty();
-	  				$('#ttest1').empty();
-	  				$('#ttest2').empty();
-	  				$('#ttest3').empty();
-
 	  				$.each(answ, function (index, value) {
-	  				  $('#ttest0').append(value.id + '<br>');
-					  $('#ttest1').append(value.name + '<br>');
-					  $('#ttest2').append(value.size + '<br>');
-					  $('#ttest3').append(value.age + '<br>');
+	  					str_table = '';
+	  					str_table += '<tr><td>' + value.id + '</td><td>' + value.name + '</td><td>' + value.size + '</td><td>' + value.age + '</td></tr>'
+	  				  $('#ttest0').append(str_table);
+					  //$('#ttest1').append(value.name + '<br>');
+					  //$('#ttest2').append(value.size + '<br>');
+					  //$('#ttest3').append(value.age + '<br>');
 					});
 	           	}
 
@@ -181,18 +180,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    <thead>
 	    	<tr>
 	    		<th>id</th>
-	    		<th>Age</th>
 	    		<th>Name</th>
 	    		<th>Size</th>
+	    		<th>Age</th>
 	    	</tr>
 	    </thead>
-	    <tbody>
-	    	<tr>
-	    		<th><div id="ttest0"  ></th>
-	    		<td><div id="ttest1"  ></td>
-	    		<td><div id="ttest2"  ></td>
-	    		<td><div id="ttest3"  ></div></td>
-	    	</tr>
+	    <tbody id="ttest0">
+	    	
 	    </tbody>
 	  </table>
 	</div>
