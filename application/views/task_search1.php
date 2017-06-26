@@ -40,7 +40,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    	format: 'DD/MM/YYYY'
 		});
 	});
-	
+			
+			var str_spec = '';
+			$.ajax({	 
+	        	url: 'index.php/api/data/load/search:testspec',
+	        	dataType: 'json',
+	  			success: function(answ){
+	  				$('#ttest1').empty();
+	  				$.each(answ, function (index, value) {
+	  					str_spec = '';
+	  					str_spec += '<option>' + value.name + '</option>'
+	  				  $('#ttest1').append(str_spec);
+					});
+	           	}
+
+	       });
+
 	 $(document).ready(function(){
 	  $("#button_1").click(function(e){
 	  	var str_table = '';
@@ -52,11 +67,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  				$('#ttest0').empty();
 	  				$.each(answ, function (index, value) {
 	  					str_table = '';
-	  					str_table += '<tr><td>' + value.id + '</td><td>' + value.name + '</td><td>' + value.size + '</td><td>' + value.age + '</td></tr>'
+	  					str_table += '<tr><td>' + value.id + '</td><td class="col-xs-8" >' + value.text + '</td><td>' + value.redactor + '</td><td>' + value.editor + '</td><td>' + value.data + '</td></tr>'
 	  				  $('#ttest0').append(str_table);
-					  //$('#ttest1').append(value.name + '<br>');
-					  //$('#ttest2').append(value.size + '<br>');
-					  //$('#ttest3').append(value.age + '<br>');
+
 					});
 	           	}
 
@@ -102,12 +115,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="form-group">
 	  <label class="col-xs-4 control-label">Специальность исполнителя</label>
 	  <div class="col-xs-3">
-	  <select class="form-control">
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
+	  <select class="form-control" id="ttest1">
+		  
 		</select>
 		</div>
 	   <label for="inputTxt2" class="col-xs-2 control-label">Исполнитель</label>
@@ -180,9 +189,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    <thead>
 	    	<tr>
 	    		<th>id</th>
-	    		<th>Name</th>
-	    		<th>Size</th>
-	    		<th>Age</th>
+	    		<th>text</th>
+	    		<th>redactor</th>
+	    		<th>editor</th>
+	    		<th>data</th>
 	    	</tr>
 	    </thead>
 	    <tbody id="ttest0">
