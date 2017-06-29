@@ -122,10 +122,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </div>
 <div class="container theme-showcase" role="main">
+
+  <h1>Название</h1>
+  <div class= "row"> 
+      <select class="selectpicker" data-style="btn-info" data-live-search="true">
+    <optgroup label="Web">
+        <option>PHP</option>
+        <option>CSS</option>
+        <option>HTML</option>
+        <option>CSS 3</option>
+        <option>Bootstrap</option>
+        <option>JavaScript</option>
+    </optgroup>
+    <optgroup label="Programming">
+      <option>Java</option>
+      <option>C#</option>
+      <option>Python</option>
+    </optgroup>
+  </select>
+  </div>
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="row">
-			<div id="treeview1" class="col-xs-4"></div>
+			   <div id="treeview1" class="col-xs-4"></div>
 			<div "col-xs-8" > 
 				<div class="row">
 				<ul class="nav nav-tabs col-xs-7" role="tablist">

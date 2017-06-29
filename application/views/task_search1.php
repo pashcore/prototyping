@@ -39,9 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    	viewMode: 'years',
 	    	format: 'DD/MM/YYYY'
 		});
-	});
-			
-			var str_spec = '';
+					var str_spec = '';
 			$.ajax({	 
 	        	url: 'index.php/api/data/load/search:testspec',
 	        	dataType: 'json',
@@ -56,6 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	       });
 
+	});
+			
+
 	 $(document).ready(function(){
 	  $("#button_1").click(function(e){
 	  	var str_table = '';
@@ -67,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  				$('#ttest0').empty();
 	  				$.each(answ, function (index, value) {
 	  					str_table = '';
-	  					str_table += '<tr><td>' + value.id + '</td><td class="col-xs-8" >' + value.text + '</td><td>' + value.redactor + '</td><td>' + value.editor + '</td><td>' + value.data + '</td></tr>'
+	  					str_table += '<tr><th>' + value.id + '</th><td class="col-xs-8" >' + value.text + '</td><td>' + value.redactor + '</td><td>' + value.editor + '</td><td>' + value.data + '</td></tr>'
 	  				  $('#ttest0').append(str_table);
 
 					});
@@ -188,11 +189,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  <table class="table">
 	    <thead>
 	    	<tr>
-	    		<th>id</th>
-	    		<th>text</th>
-	    		<th>redactor</th>
-	    		<th>editor</th>
-	    		<th>data</th>
+	    		<th>#</th>
+	    		<th>Текст задачи</th>
+	    		<th>Проверяющий</th>
+	    		<th>Исполитель</th>
+	    		<th>Дата</th>
 	    	</tr>
 	    </thead>
 	    <tbody id="ttest0">
