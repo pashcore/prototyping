@@ -102,9 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           data: defaultData
         });
        
-
-        
-       
+     
 
           
 
@@ -162,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <ul class="nav nav-tabs " role="tablist">
             <li role="presentation" class="active"><a href="#One" aria-controls="One" role="tab" data-toggle="tab">Деньги</a></li>
             <li role="presentation"><a href="#Two" aria-controls="Two" role="tab" data-toggle="tab">Работники</a></li>
-            <li role="presentation"><a href="#messages" aria-controls="Three" role="tab" data-toggle="tab">Three</a></li>
+            <li role="presentation"><a href="#Three" aria-controls="Three" role="tab" data-toggle="tab">Three</a></li>
             <li role="presentation"><a href="#Four" aria-controls="Four" role="tab" data-toggle="tab">Four</a></li>
         </ul>
         
@@ -190,7 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <div class="col-xs-6">
                               <div class="progress">
                                 <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
-                                  <span class="sr-only">80% Complete (danger)</span>
+                                  <span class="sr-only">25% Complete (danger)</span>
                                 </div>
                               </div>
                               </div>
@@ -201,7 +199,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <div class="col-xs-6">
                                <div class="progress">
                                   <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-                                    <span class="sr-only">40% Complete (success)</span>
+                                    <span class="sr-only">10% Complete (success)</span>
                                   </div>
                                 </div>
                                 </div>
@@ -222,7 +220,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h4 class="col-xs-7">Иванов Иван Иванович : Выполнил 50%</h4> 
                 <div class="col-xs-5">
                   <div class="progress ">
-                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
                     <span class="sr-only">50% Complete (success)</span>
                     </div>
                   </div>
@@ -233,7 +231,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h4 class="col-xs-7">Шуличенко Евдокия Алексеевна  : Выполнила 5%</h4> 
                 <div class="col-xs-5">
                   <div class="progress ">
-                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
                     <span class="sr-only">5% Complete (success)</span>
                     </div>
                   </div>
@@ -244,16 +242,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h4 class="col-xs-7">Хохорин Елизар Артемиевич   : Выполнил 0%</h4> 
                 <div class="col-xs-5">
                   <div class="progress ">
-                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                     <span class="sr-only">0% Complete (success)</span>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <div class="row">
+                <h4 class="col-xs-7">Петров Петр Иванович : Выполнил 80%</h4> 
+                <div class="col-xs-5">
+                  <div class="progress ">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                    <span class="sr-only">50% Complete (success)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+
             </div>
           </div>
-            <div role="tabpanel" class="tab-pane" id="messages">...</div>
+            <div role="tabpanel" class="tab-pane" id="Three">...</div>
             <div role="tabpanel" class="tab-pane" id="Four">...</div>
         </div>
         </div>
