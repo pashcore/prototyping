@@ -43,6 +43,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	           	}
 
 	      });
+		var str_spec2 = '';
+		$.ajax({	 
+	        	url: 'index.php/api/data/load/task:list2',
+	        	dataType: 'json',
+	  			success: function(answ){
+	  				$('#go2').empty();
+	  				$.each(answ, function (index, value) {
+	  					str_spec2 = '';
+	  					str_spec2 += '<tr><td><span class="' + value.type + '" aria-hidden="true"></span></td><td>' + value.task + '</td><td>' + value.perf +'</td><td>' + value.date_p + '</td><td>' + value.date_r + '</td></tr>'
+	  				  $('#go2').append(str_spec2);
+					});
+	           	}
+
+	      });
 </script>
 </head>
 <body role="document">
@@ -110,7 +124,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             	</div>
             </div>
 			<div role="tabpanel" class="tab-pane" id="Two">
-            	gggggg
+            	<div class="row">
+            		<div class="table-responsive">
+					  <table class="table">
+					    <thead>
+					    	<tr>
+					    		<th>Тип</th>
+					    		<th>Задача</th>
+					    		<th>Исполнитель</th>
+					    		<th>Срок планируемый</th>
+					    		<th>Срок реальный</th>
+					    	</tr>
+					    </thead>
+					    <tbody id="go2">
+					    </tbody>
+					  </table>
+					</div>
+            	</div>
             </div>
         </div>
         </div>

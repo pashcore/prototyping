@@ -19,6 +19,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- это кастомизация темы, изменения и докруты классов -- сюда -->
 <link href="css/bootstrap/theme.css" rel="stylesheet">
  <link href="css/bootstrap/bootstrap-select.css" rel="stylesheet">
+
+
 <script src="js/jquery.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
@@ -97,11 +99,68 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        
      
 
-          
+              var dropZone = document.getElementById('drop-zone');
+              var uploadForm = document.getElementById('js-upload-form');
+
+              var startUpload = function(files) {
+                  console.log(files)
+              }
+
+              uploadForm.addEventListener('submit', function(e) {
+                  var uploadFiles = document.getElementById('js-upload-files').files;
+                  e.preventDefault()
+
+                  startUpload(uploadFiles)
+              })
+
+              dropZone.ondrop = function(e) {
+                  e.preventDefault();
+                  this.className = 'upload-drop-zone';
+
+                  startUpload(e.dataTransfer.files)
+              }
+
+              dropZone.ondragover = function() {
+                  this.className = 'upload-drop-zone drop';
+                  return false;
+              }
+
+              dropZone.ondragleave = function() {
+                  this.className = 'upload-drop-zone';
+                  return false;
+              }
 
         });
 
+
+
+
+
 </script>
+ <style type="text/css">
+
+ /* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+
+</style>
+
 </head>
 <body role="document">
 <!-- Fixed navbar -->
@@ -126,14 +185,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <div class="container theme-showcase" role="main">
 	<h2>ЗАДАЧА <small>(ПИСЬМО №101 от 22.06.17)</small> </h2>
+	
 	<h4>мне в работу</h4>
+
 	<div class="row">
 		<div class="col-md-4">
 			<h3>Исполнители по задаче</h3>
 			<div class="col-md-10">
 			<div id="treeview1"></div>				
 			</div>
-
 		</div>
 		<div class="col-md-5">
 			<h3>Текст задачи</h3>
@@ -143,15 +203,89 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<h3>Срок</h3>
 		</div>
 	</div>
+
+	<div class="row" >
+	
+	</div>
+
 	<div class="row">
-	исходные данные	
+		 
+    <div class="col-md-10">
+      <h4>Отчет о выполнении задачи</h4>
+   
+      <textarea class="form-control" rows="5" placeholder="ТЕКСТ ОТЧЕТА"></textarea>
+      
+    </div>
+
+    <div class="col-md-2">
+      <div style="clear:both; witdh: 100%; height: 70px;">&nbsp;</div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Действия <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Написать письмо</a></li>
+          <li><a href="#">Поставить подзадачу</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+
 	</div>
+  <div class="row">
+
+    <div class="col-md-offset-7">
+      <p>
+        <button type="button" class="btn btn-primary ">ЗАДАЧА ВЫПОЛНЕНА</button>
+        <button type="button" class="btn btn-default ">СОХРАНИТЬ</button>
+      </p>
+    </div>
+    
+  </div>
+
+
 	<div class="row">
-		отчет
+		
+        <div class="col-md-12">
+
+          <!-- Standar Form -->
+          <h4>Выберите файлы с вашего компьютера</h4>
+          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="files[]" id="js-upload-files" multiple>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Загрузить файлы</button>
+            </div>
+          </form>
+
+          <!-- Drop Zone -->
+          <h4>Или перетащите файлы ниже</h4>
+          <div class="upload-drop-zone" id="drop-zone">
+            Просто перетащите файлы сюда
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+          <!-- Upload Finished -->
+          <div class="js-upload-finished">
+            <h3>Прикрепленные файлы</h3>
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+            </div>
+          </div>
+          
+      </div>
+
 	</div>
-	<div>
-		файлы
-	</div>
+
 </div>
 </body>
 </html>

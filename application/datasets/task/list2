@@ -1,0 +1,42 @@
+[ 
+{
+   "type" : "glyphicon glyphicon-envelope",
+   "task" : "dfasdssddddfasdgazeh  gzsdfg  sedf sd" ,
+   "perf" : "Вастьянов Я.В.",
+   "date_p" : "20.02.1992",
+   "date_r": "20.03.2005"
+
+},
+{
+   "type" : "glyphicon glyphicon-folder-open",
+   "task" : "dfasdssddddfasdgazeh  gzsdfg  sedf sd" ,
+   "perf" : "Перфильева Е.В.",
+   "date_p" : "20.02.1992",
+   "date_r": "20.03.2005"
+
+},
+{
+   "type" : "glyphicon glyphicon-envelope",
+   "task" : "dfasdssddddfasdgazeh  gzsdfg  sedf sd" ,
+   "perf" : "Полотенцев Э.К.",
+   "date_p" : "20.02.1992",
+   "date_r": "20.03.2005"
+
+},
+{
+   "type" : "glyphicon glyphicon-music",
+   "task" : "dfasdssddddfasdgazeh  gzsdfg  sedf sd" ,
+   "perf" : "Летова А.П.",
+   "date_p" : "20.02.1992",
+   "date_r": "20.03.2005"
+
+},
+{
+   "type" : "glyphicon glyphicon-file",
+   "task" : "dfasdssddddfasdgazeh  gzsdfg  sedf sd" ,
+   "perf" : "Летова А.П.",
+   "date_p" : "20.02.1992",
+   "date_r": "20.03.2005"
+
+}
+]
