@@ -226,16 +226,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="col-md-offset-7">
       <div style="clear:both; witdh: 100%; height: 10px;">&nbsp;</div>
       
-      <button type="button" class="btn btn-primary ">ЗАДАЧА ВЫПОЛНЕНА</button>
-      <button type="button" class="btn btn-default ">СОХРАНИТЬ</button>
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Действия <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Написать письмо</a></li>
-          <li><a href="#">Поставить подзадачу</a></li>
-        </ul>
+      <div class="btn-group" role="group" aria-label="...">
+
+        <button type="button" class="btn btn-primary ">ЗАДАЧА ВЫПОЛНЕНА</button>
+        <button type="button" class="btn btn-default ">СОХРАНИТЬ</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Действия <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Написать письмо</a></li>
+            <li><a href="#">Поставить подзадачу</a></li>
+          </ul>
+        </div>
+
       </div>
 
     </div>
@@ -254,7 +258,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="form-group">
                 <input type="file" name="files[]" id="js-upload-files" multiple>
               </div>
-              <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Загрузить файлы</button>
+              <!--<button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Загрузить файлы</button> -->
             </div>
           </form>
 
