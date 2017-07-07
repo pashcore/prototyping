@@ -39,54 +39,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         var defaultData = [
           {
-            text: 'Parent 1',
-            href: '#parent1',
+            text: 'Иванов',
+            href: '#Иванов',
             tags: ['4'],
             color: "#555555",
-  			backColor: "#FFFFFF",
+  			    backColor: "#FFFFFF",
             nodes: [
               {
-                text: 'Child 1',
-                href: '#child1',
+                text: 'Петров',
+                href: '#Петров',
                 tags: ['2'],
                 nodes: [
                   {
-                    text: 'Grandchild 1',
-                    href: '#grandchild1',
+                    text: 'Сидоров',
+                    href: '#Сидоров',
                     tags: ['0']
                   },
                   {
-                    text: 'Grandchild 2',
-                    href: '#grandchild2',
+                    text: 'Денисов',
+                    href: '#Денисов',
                     tags: ['0']
                   }
                 ]
               },
               {
-                text: 'Child 2',
-                href: '#child2',
+                text: 'Васильев',
+                href: '#Васильев',
                 tags: ['0']
               }
             ]
           },
           {
-            text: 'Parent 2',
-            href: '#parent2',
-            tags: ['0']
-          },
-          {
-            text: 'Parent 3',
-            href: '#parent3',
-             tags: ['0']
-          },
-          {
-            text: 'Parent 4',
-            href: '#parent4',
-            tags: ['0']
-          },
-          {
-            text: 'Parent 5',
-            href: '#parent5'  ,
+            text: 'Васильков',
+            href: '#Васильков',
             tags: ['0']
           }
         ];
@@ -195,30 +180,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div id="treeview1"></div>				
 			</div>
 		</div>
+
 		<div class="col-md-5">
 			<h3>Текст задачи</h3>
 			<DIV id="text_task"></DIV>
 		</div>
+
 		<div class="col-md-3">
 			<h3>Срок</h3>
 		</div>
+
 	</div>
 
 	<div class="row" >
+    <div class="col-md-12">
+    <h3>Исходные данные</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Файл</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody id="initial_data">
+        
+      </tbody>
+    </table>
+    </div>
 	
 	</div>
 
 	<div class="row">
 		 
-    <div class="col-md-10">
-      <h4>Отчет о выполнении задачи</h4>
+    <div class="col-md-12">
+      <h3>Отчет о выполнении задачи</h3>
    
       <textarea class="form-control" rows="5" placeholder="ТЕКСТ ОТЧЕТА"></textarea>
       
     </div>
 
-    <div class="col-md-2">
-      <div style="clear:both; witdh: 100%; height: 70px;">&nbsp;</div>
+
+	</div>
+  <div class="row">
+
+    <div class="col-md-offset-7">
+      <div style="clear:both; witdh: 100%; height: 10px;">&nbsp;</div>
+      
+      <button type="button" class="btn btn-primary ">ЗАДАЧА ВЫПОЛНЕНА</button>
+      <button type="button" class="btn btn-default ">СОХРАНИТЬ</button>
       <div class="btn-group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Действия <span class="caret"></span>
@@ -226,21 +235,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <ul class="dropdown-menu">
           <li><a href="#">Написать письмо</a></li>
           <li><a href="#">Поставить подзадачу</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
         </ul>
       </div>
-    </div>
 
-	</div>
-  <div class="row">
-
-    <div class="col-md-offset-7">
-      <p>
-        <button type="button" class="btn btn-primary ">ЗАДАЧА ВЫПОЛНЕНА</button>
-        <button type="button" class="btn btn-default ">СОХРАНИТЬ</button>
-      </p>
     </div>
     
   </div>
