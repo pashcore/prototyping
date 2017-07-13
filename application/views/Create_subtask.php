@@ -187,6 +187,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<DIV id="text_task"></DIV>
       <h3>Текст подзадачи</h3>
       <textarea class="form-control" rows="5" placeholder="Текст подзадачи"></textarea>
+     
+		</div>
+
+		<div class="col-md-3">
+      <div  class ="row">
+			<h3>Срок</h3>
+      <h4>25.06.2010</h4>
       <h3>Исполнитель</h3>
       <select class="selectpicker " data-live-search="true" standard title="Фамилия">
           <optgroup label="ФИО">
@@ -198,13 +205,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <option>Бореев Константин Сократович</option>
           </optgroup>
          </select>
-		</div>
-
-		<div class="col-md-3">
-			<h3>Срок</h3>
-      <h4>25.06.2010</h4>
-      <h3>Дата фактическая</h3>
-      <h4>25.09.2010</h4>
+       </div>
+     <div style="clear:both; witdh: 100%; height: 25px;">&nbsp;</div>
+    <div class=" col-md-offset-5">
+      <button type="button" class="btn btn-default btn-lg">Создать</button>  
+    </div>
 		</div>
 
 	</div>
@@ -223,52 +228,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
       </tbody>
     </table>
-      <div class="row">
+     <div class="row">
     
-        <div class="col-md-12">
-
-          <!-- Standar Form -->
-          <h4>Выберите файлы с вашего компьютера</h4>
-          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
-            <div class="form-inline">
-              <div class="form-group">
-                <input type="file" name="files[]" id="js-upload-files" multiple>
-              </div>
-              <!--<button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Загрузить файлы</button> -->
-            </div>
-          </form>
-
-          <!-- Drop Zone -->
-          <h4>Или перетащите файлы ниже</h4>
-          <div class="upload-drop-zone" id="drop-zone">
-            Просто перетащите файлы сюда
-          </div>
-
-          <!-- Progress Bar -->
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-              <span class="sr-only">60% Complete</span>
-            </div>
-          </div>
-          <!-- Upload Finished -->
-          <div class="js-upload-finished">
-            <h3>Прикрепленные файлы</h3>
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
-            </div>
-          </div>
-          
-      </div>
-    </div>
+       
+    </div> 
     
 
   </div>
 
   <div class= "row">
-    <div class="col-md-offset-11 col-md-1">
-      <button type="button" class="btn btn-default btn-lg">Создать</button>  
-    </div>
+    
     
   </div>
 <div>
