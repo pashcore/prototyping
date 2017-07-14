@@ -97,11 +97,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <div class="container theme-showcase" role="main">
   <div class="row">
-    <h3>Фонд оплаты труда</h3>
+    
+    <div class="col-md-4">
+      <h3>Фонд оплаты труда</h3>
+      <input type="text" class="form-control" placeholder="100 000">
+    </div>
+    
   </div>
   <div class="row">
     <div>
+
       <table class="table">
+
         <thead>
           <tr>
             <th>#</th>
@@ -110,6 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th class="col-md-2">Процент</th>
           </tr>
         </thead>
+
         <tbody id="dd">
           <tr id="">
             <td><a class="btn btn-default" role="button"  id="1"><span class="glyphicon glyphicon-plus"></span></a></td>
@@ -118,9 +126,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <td><input type="text" class="form-control" placeholder="30%"></td>
           </tr>
         </tbody>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="text" class="form-control" placeholder="= 30 000"></td>
+            <td><input type="text" class="form-control" placeholder="= 30%"></td>
+          </tr>
+        </tbody>
+
       </table>
+
     </div>
-    
   </div>
 
 </div>
